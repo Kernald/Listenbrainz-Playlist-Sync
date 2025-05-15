@@ -1,0 +1,29 @@
+[project]
+name = "listenbrainz-playlist-sync"
+version = "1.2.4"
+description = "Synchronizes playlists between ListenBrainz and other services."
+authors = [{ name = "Michael Sciarabba" }]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.8"
+
+classifiers = [
+	"Development Status :: 5 - Production/Stable",
+	"Intended Audience :: End Users/Desktop",
+	"Operating System :: OS Independent",
+	"Programming Language :: Python :: 3",
+	"Topic :: Multimedia :: Sound/Audio",
+]
+
+keywords = ["listenbrainz", "playlist", "music", "sync"]
+
+[project.urls]
+Homepage = "https://github.com/Mjsciarabba/Listenbrainz-Playlist-Sync"
+"Bug Tracker" = "https://github.com/Mjsciarabba/Listenbrainz-Playlist-Sync/issues"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+listenbrainz-playlist-sync = "main:main"

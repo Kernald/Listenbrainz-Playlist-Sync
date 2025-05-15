@@ -7,10 +7,10 @@ import calendar
 from modules.logger_utils import logger
 
 
-with open("config.yml", 'r') as ymlfile:
-    cfg = yaml.safe_load(ymlfile)
+def main():
+    with open("config.yml", 'r') as ymlfile:
+        cfg = yaml.safe_load(ymlfile)
 
-if __name__ == "__main__":
     my_date = date.today()
     today = calendar.day_name[my_date.weekday()]
     # logger.info("today is "+today)
@@ -20,3 +20,6 @@ if __name__ == "__main__":
     if today == "Monday":
       get_weeklyjams_playlist(cfg['user_token'])
     #get_weeklyexploration_playlist(cfg['user_token'])
+
+if __name__ == "__main__":
+    main()
